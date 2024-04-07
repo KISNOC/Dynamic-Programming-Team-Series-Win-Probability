@@ -39,5 +39,11 @@ void simulate_series(unsigned int nb_games,
         }
     }
 
+    /* Recursive case */
+    for (unsigned int i = 1; i <= nb_games; i++) {
+        for (unsigned int j = 1; j <= nb_games; j++) {
+            table.at(i, j) = table.at(i - 1, j) * winnning_probability + table.at(i, j - 1) * losing_probability;
+        }
+    }
 
 }
