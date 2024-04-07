@@ -21,14 +21,16 @@ void simulate_series(unsigned int nb_games,
     Tableau<unsigned int> table(std::vector<unsigned int>(dimensions, dimensions + 2));
 
     /* Basic case */
-    /* If there are no more games left for team B to win, then team A has loss the series. */
+    /* If there are no more games left for team B to win, then team A has loss the series */
     for (unsigned int i = 0; i <= nb_games; i++) {
         table.at(i, 0) = 0;
     }
-    /* If there are no more games left for team A to win, then team A has won the series. */
+    /* If there are no more games left for team A to win, then team A has won the series */
     for (unsigned int j = 0; j <= nb_games; j++) {
         table.at(0, j) = 1;
     }
+    /* At the beginning of the series, the probability of winning is the initialized one */
+    table.at(nb_games, nb_games) = winnning_probability;
 
 
 }
