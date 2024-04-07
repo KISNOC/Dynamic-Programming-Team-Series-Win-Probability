@@ -4,11 +4,14 @@
 
 #include "tableau.hpp"
 
+void simulate_series(unsigned int games, float probability, float probability1);
+
 int main() {
     unsigned int nb_games = 5;
     float winnning_probability = 0.5;
     float losing_probability = 1 - winnning_probability;
 
+    simulate_series(nb_games, winnning_probability, losing_probability);
 
     return 0;
 }
