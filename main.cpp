@@ -46,4 +46,17 @@ void simulate_series(unsigned int nb_games,
         }
     }
 
-}
+    /* Print the table */
+    std::cout << std::setw(8) << " ";
+    for (unsigned int j = 0; j <= nb_games; j++) {
+        std::cout << std::setw(8) << j;
+    }
+    std::cout << "\n";
+    for (unsigned int i = 0; i <= nb_games; i++) {
+        std::cout << std::setw(8) << i;
+        for (unsigned int j = 0; j <= nb_games; j++) {
+            std::cout << std::fixed << std::setprecision(3) << std::setw(8) << table.at(i, j);
+        }
+        std::cout << "\n";
+    }
+};
