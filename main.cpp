@@ -29,8 +29,12 @@ void simulate_series(unsigned int nb_games,
     for (unsigned int j = 0; j <= nb_games; j++) {
         table.at(0, j) = 1;
     }
-    /* At the beginning of the series, the probability of winning is the initialized one */
-    table.at(nb_games, nb_games) = winnning_probability;
+    /* If there are equal number of games left for both teams to win, then the probability of winning is the initialized one */
+    for (unsigned int i = 1; i <= nb_games; i++) {
+        for (unsigned int j = 1; j <= nb_games; j++) {
+            table.at(i, j) = winnning_probability;
+        }
+    }
 
 
 }
