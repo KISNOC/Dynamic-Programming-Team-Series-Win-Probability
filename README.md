@@ -1,4 +1,4 @@
-# Dynamic Programming Team Series Win Probability
+# Dynamic-Programming-Team-Series-Win-Probability
 
 English section below
 
