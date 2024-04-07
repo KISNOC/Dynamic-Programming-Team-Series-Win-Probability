@@ -20,6 +20,15 @@ void simulate_series(unsigned int nb_games,
     unsigned int dimensions[2] = {nb_games + 1, nb_games + 1};
     Tableau<unsigned int> table(std::vector<unsigned int>(dimensions, dimensions + 2));
 
+    /* Basic case */
+    /* If there are no more games left for team B to win, then team A has loss the series. */
+    for (unsigned int i = 0; i <= nb_games; i++) {
+        table.at(i, 0) = 0;
+    }
+    /* If there are no more games left for team A to win, then team A has won the series. */
+    for (unsigned int j = 0; j <= nb_games; j++) {
+        table.at(0, j) = 1;
+    }
 
 
 }
