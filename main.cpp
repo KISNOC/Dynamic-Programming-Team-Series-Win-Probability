@@ -11,3 +11,13 @@ int main() {
 
     return 0;
 };
+
+void simulate_series(unsigned int nb_games,
+                     float winnning_probability,
+                     float losing_probability,
+                     std::vector<unsigned int>& series) {
+
+
+
+
+}
